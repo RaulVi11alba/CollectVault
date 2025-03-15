@@ -1,0 +1,28 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la barra de navegación */
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+/* Ajustar el comportamiento del menú en móviles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
