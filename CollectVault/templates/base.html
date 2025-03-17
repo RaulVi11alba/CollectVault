@@ -32,13 +32,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Acerca de</a>
                 </li>
+                {% if not user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'register' %}">Registrarse</a>
                 </li>
-                {% if user.is_authenticated %}
+                {% else %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
                 </li>
